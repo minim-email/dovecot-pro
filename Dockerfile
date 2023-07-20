@@ -19,12 +19,7 @@ RUN --mount=type=bind,target=/mnt : \
         > /etc/apt/sources.list.d/dovecot.list \
     && apt-get -y update \
     && apt-get -y install \
-        dovecot-ee-core \
-        dovecot-ee-imapd \
-        dovecot-ee-pop3d \
-        dovecot-ee-lmtpd \
-        dovecot-ee-sieve \
-        dovecot-ee-managesieved \
+        dovecot-ee-* \
     && rm -rf /var/lib/apt/lists/* \
     && rm /etc/apt/sources.list.d/*
 
